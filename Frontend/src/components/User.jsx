@@ -6,13 +6,13 @@ function User() {
   const [myapidata,setmyapidata]=useState([])
 
   async function getdata(){
-    const result=await axios.get("http://localhost:4500/getdata")
+    const result=await axios.get("https://deploy-backend-tgm2.onrender.com/getdata")
     console.log(result.data);
     setmyapidata(result.data)
   }
 
   const handelDelete=(id)=>{
-    axios.delete("http://localhost:4500/deleteuser/"+id)
+    axios.delete("https://deploy-backend-tgm2.onrender.com/deleteuser/"+id)
     .then(res=>{
       window.location.reload()
     })
