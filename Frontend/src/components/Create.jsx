@@ -11,7 +11,7 @@ function Create() {
 
     const handelsubmit=(e)=>{
         e.preventDefault()
-        axios.post("http://localhost:4500/create",{name,email,number})
+        axios.post("https://deploy-backend-tgm2.onrender.com/create",{name,email,number})
         .then((user)=>{
             navigate("/")
         })
