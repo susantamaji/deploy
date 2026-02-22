@@ -13,7 +13,7 @@ function Update() {
   const navigate = useNavigate()
 
   useEffect(()=>{
-    axios.get("http://localhost:4500/getuser/"+id)
+    axios.get("https://deploy-backend-tgm2.onrender.com/getuser/"+id)
     .then(result=>{
       setname(result.data.name)
       setemail(result.data.email)
@@ -23,7 +23,7 @@ function Update() {
 
   const handelupdate=(e)=>{
     e.preventDefault()
-    axios.put("http://localhost:4500/update/"+id,{name,email,number})
+    axios.put("https://deploy-backend-tgm2.onrender.com/update/"+id,{name,email,number})
     .then(result=>{
       navigate("/")
     })
